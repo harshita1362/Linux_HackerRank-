@@ -1,4 +1,4 @@
-# A mathematical expression containing +,-,*,^, / and parenthesis will be provided. Read in the expression, then evaluate it. Display the result rounded to  decimal places.
+# A mathematical expression containing +,-,*,^, / and parenthesis will be provided. Read in the expression, then evaluate it. Display the result rounded to 3 decimal places.
 # Constraints
 # All numeric values are <= 999.
 # Sample Input
@@ -17,5 +17,5 @@
 #  22.146
 
 #  Solution : 
-read line;
-printf "%.3f" $(echo "scale = 4;$line"|bc);
+read expression
+printf "%.3f\n" "$(echo "scale=10; $expression" | bc -l)"
